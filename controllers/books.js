@@ -5,8 +5,8 @@ const router = require('express').Router();
 const db = require('../db/connect_db');
 
 // sql files
-const Book = require('../models/queries').books;
-const Note = require('../models/queries').notes;
+const Book = require('../models/index').books;
+const Note = require('../models/index').notes;
 
 // routes
 router.get('/', (req, res) => {

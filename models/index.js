@@ -1,3 +1,5 @@
+// SQL provider file
+
 const QueryFile = require('pg-promise').QueryFile;
 const path = require('path');
 
