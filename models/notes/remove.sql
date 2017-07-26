@@ -1,3 +1,3 @@
-DELETE FROM notes;
-WHERE id = $1;
+DELETE FROM notes
+WHERE id = $1
 RETURNING *;
