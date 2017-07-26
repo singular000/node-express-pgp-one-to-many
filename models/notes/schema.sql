@@ -5,5 +5,5 @@ CREATE TABLE notes (
   date DATE NOT NULL,
   comments VARCHAR NOT NULL,
   rating INT NOT NULL CHECK (rating > 0 AND rating < 6),
-  book_id INT REFERENCES books
+  book_id INT REFERENCES books ON DELETE CASCADE
 )

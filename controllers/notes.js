@@ -28,4 +28,15 @@ router.post('/', (req, res) => {
     });
 });
 
+router.put('/:id', (req, res) => {
+  req.body.id = req.params.id;
+  db.one(Note.update, req.body)
+    .then(data => {
+      res.status(200).json({ status: 'success', data: data, message: 'updated a note' });
+    })
+    .catch(err => {
+      res.status(400).json({ status: 'failure', err: err.message, message: 'failed to update note' });
+    })
+});
+
 module.exports = router;

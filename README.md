@@ -141,3 +141,32 @@ Don't do this on a create route:
 Do do this instead  (include the `req.body` object as data ):
 
 ![](https://i.imgur.com/vleQVbc.png)
+
+
+<br>
+
+Must use **x-www-form-urlencoded** option in Postman to send data
+
+![](https://i.imgur.com/Mksv6jQ.png)
+
+Otherwise will receive 'column' does not exist:
+
+![](https://i.imgur.com/tv7owCJ.png)
+
+<br>
+<hr>
+
+## ENDPOINTS
+
+`/books` 
+
+index of books
+
+![](https://i.imgur.com/EzvoTHo.png)
+
+
+`/books/1`
+
+show a single book -- with an array of all notes related to the book.
+
+![](https://i.imgur.com/BZaWqfg.png)
