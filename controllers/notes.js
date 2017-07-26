@@ -39,4 +39,13 @@ router.put('/:id', (req, res) => {
     })
 });
 
+router.delete('/:id', (req, res) => {
+  db.one(Note.remove, req.params.id)
+    .then(data => {
+      res.status(200).json({ status: 'success', data: data, message: 'deleted a note' });
+    })
+    .catch(err => {
+      res.status(400).json({ status: 'failure', err: err.message, message: 'could not delete note' });
+    })
+});
 module.exports = router;

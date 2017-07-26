@@ -165,8 +165,18 @@ index of books
 ![](https://i.imgur.com/EzvoTHo.png)
 
 
+## ENDPOINTS with relational data
+
 `/books/1`
 
 show a single book -- with an array of all notes related to the book.
 
 ![](https://i.imgur.com/BZaWqfg.png)
+
+`/notes`
+
+show all notes - each note is joined with the book to which it belongs
+
+![](https://i.imgur.com/C0CFXmZ.png)
+
+
