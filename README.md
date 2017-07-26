@@ -77,15 +77,19 @@ if (err instanceof db.$config.pgp.errors.QueryFileError) {
 }                                                                      
 ```
 
-**Delete notes**
+**Delete Book**
 
 For DELETE I arbitrarily decided to send the deleted resource in the response: using `RETURNING *` in the sql statement. using `db.one` query in the controller, and status code of 200 (instead of 204).
 
 ![](https://i.imgur.com/t2c5RCG.png)
 
-**JSON notes**
+**Delete Book - constraints**
 
-JSON field: Postgres validates json, but there is no native schema validation support for nested json fields and datatypes. Relating JSON data is also problematic. Lesson-wise, this could lead into the topic of 'Normalization' and relations, and maybe some talk about "anti-patterns" using json in a relational db.
+A Note has a **constraint** of **REFERENCES** to its parent book. This means if a user attempts to delete a book, the note would be orphaned, therefore an error kicks up denying the deletion of the book.
+
+Because of this, a Note also has an **ON DELETE CASCADE**, which mean that instead of getting an error, all related notes will also be deleted in order to avoid orphans.
+
+_Deleting a book will also delete all associated notes_
 
 #### Postgres / SQL Resources
 
@@ -155,15 +159,6 @@ Otherwise will receive 'column' does not exist:
 
 <br>
 <hr>
-
-## ENDPOINTS
-
-`/books` 
-
-index of books
-
-![](https://i.imgur.com/EzvoTHo.png)
-
 
 ## ENDPOINTS with relational data
 
