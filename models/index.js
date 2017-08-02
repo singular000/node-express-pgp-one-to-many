@@ -18,7 +18,7 @@ module.exports = {
   },
   notes: {
     all: sql('notes/all.sql'),
-    find: sql('notes/find.sql'),
+    search: sql('notes/search.sql'),
     add: sql('notes/add.sql'), 
     update: sql('notes/update.sql'),
     remove: sql('notes/remove.sql')
