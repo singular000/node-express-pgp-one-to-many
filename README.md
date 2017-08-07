@@ -14,16 +14,24 @@ added notes model/schema
 
 ## setup
 
-Run create db file in bash
+Clone repo
+
+Create db from bash
 
 ```
 $ psql -f db/create_db.sql
 ```
 
-Run schema file in bash
+Create books table by running schema file from bash
 
 ```
-$ psql books_app_api -f models/books/schema.sql
+$ psql books_multi_app_api -f models/books/schema.sql
+```
+
+Create notes table
+
+```
+$ psql books_multi_app_api -f models/notes/schema.sql
 ```
 
 ## CONSTRAINTS
