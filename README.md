@@ -51,10 +51,14 @@ show a single book -- with an array of all notes related to the book.
 
 ![](https://i.imgur.com/BZaWqfg.png)
 
+![](https://i.imgur.com/AmuISV3.png)
+
 `/notes`
 
 show all notes - each note is joined with the book to which it belongs
 
 ![](https://i.imgur.com/C0CFXmZ.png)
+
+![](https://i.imgur.com/voLumEh.png)
 
 
